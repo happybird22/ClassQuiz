@@ -182,3 +182,22 @@ const questions = [
 ]
 
 // Answer Handling
+
+function handleAnswer() {
+    const selectedAnswer = document.querySelector(`input[name="answer"]:checked`);
+
+    if (selectedAnswer) {
+        let chosenLetter = selectedAnswer.value;
+        let currentQuestion = questions[currentQuestionIndex];
+
+        userAnswers.push(currentQuestion.answers[chosenLetter]);
+
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex < questions.lenght) {
+            displayQuestion();
+        } else {
+            showResilt();
+        }
+    }
+}
