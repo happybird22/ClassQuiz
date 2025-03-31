@@ -1,0 +1,49 @@
+#nextbtn { display: none; }
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#quizContainer {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="radio"] {
+    margin: 5px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+#resultsContainer {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #333;
+}

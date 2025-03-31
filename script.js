@@ -1,3 +1,7 @@
+const questionsContainer = document.getElementById("questionsContainer");
+const nextbtn = document.getElementById("nextbtn");
+const resultsContainer = document.getElementById("resultsContainer");
+
 const questions = [
     {
         question: `What motivates you most in an adventure?`,
@@ -8,10 +12,10 @@ const questions = [
             D: `Amassing power and fortune`
         },
         answers: {
-            A: { Barbarian: 2, Fighter: 1, Sorceror: 1}, 
-            B: { Ranger: 2, Rogue: 1, Warlock: 1},
-            C: { Paladin: 2, Monk: 1, Cleric: 1, Druid: 1},
-            D: { Wizard: 2, Bard: 1}
+            A: { Barbarian: 2, Fighter: 1, Sorceror: 1 },
+            B: { Ranger: 2, Rogue: 1, Warlock: 1 },
+            C: { Paladin: 2, Monk: 1, Cleric: 1, Druid: 1 },
+            D: { Wizard: 2, Bard: 1 }
         }
     },
     {
@@ -23,10 +27,10 @@ const questions = [
             D: `I go with the flow, no matter what`
         },
         answers: {
-            A: { Bard: 2, Paladin: 1, Cleric: 1}, 
-            B: { Rogue: 2, Wizard: 1, Barbarian: 1},
-            C: { Druid: 2, Monk: 1, Ranger: 1},
-            D: { Fighter: 2, Warlock: 1, Sorceror: 1}
+            A: { Bard: 2, Paladin: 1, Cleric: 1 },
+            B: { Rogue: 2, Wizard: 1, Barbarian: 1 },
+            C: { Druid: 2, Monk: 1, Ranger: 1 },
+            D: { Fighter: 2, Warlock: 1, Sorceror: 1 }
         }
     },
     {
@@ -38,10 +42,10 @@ const questions = [
             D: `Anything I can to help them feel better`
         },
         answers: {
-            A: { Rogue: 2, Sorceror: 1, Fighter: 1}, 
-            B: { Ranger: 2, Warlock: 1, Wizard: 1},
-            C: { Paladin: 2, Monk: 1, Barbarian: 1},
-            D: { Cleric: 2, Druid: 1, Bard: 1}
+            A: { Rogue: 2, Sorceror: 1, Fighter: 1 },
+            B: { Ranger: 2, Warlock: 1, Wizard: 1 },
+            C: { Paladin: 2, Monk: 1, Barbarian: 1 },
+            D: { Cleric: 2, Druid: 1, Bard: 1 }
         }
     },
     {
@@ -53,10 +57,10 @@ const questions = [
             D: `a magical place to be harnessed`
         },
         answers: {
-            A: { Warlock: 2, Rogue: 1, Paladin: 1}, 
-            B: { Wizard: 2, Barbarian: 1, Fighter: 1},
-            C: { Druid: 2, Ranger: 1, Monk: 1},
-            D: { Sorceror: 2, Bard: 1, Cleric: 1}
+            A: { Warlock: 2, Rogue: 1, Paladin: 1 },
+            B: { Wizard: 2, Barbarian: 1, Fighter: 1 },
+            C: { Druid: 2, Ranger: 1, Monk: 1 },
+            D: { Sorceror: 2, Bard: 1, Cleric: 1 }
         }
     },
     {
@@ -68,10 +72,10 @@ const questions = [
             D: `Start foraging in the nearby forest`
         },
         answers: {
-            A: { Cleric: 2, Paladin: 1, Warlock: 1}, 
+            A: { Cleric: 2, Paladin: 1, Warlock: 1 },
             B: { Barbarian: 2, Fighter: 1, Sorceror: 1 },
-            C: { Ranger: 2, Rogue: 1, Monk: 1},
-            D: { Druid: 2, Bard: 1, Wizard: 1}
+            C: { Ranger: 2, Rogue: 1, Monk: 1 },
+            D: { Druid: 2, Bard: 1, Wizard: 1 }
         }
     },
     {
@@ -83,10 +87,10 @@ const questions = [
             D: `Fighting never provides lasting resolutions, we need peace through diplomacy`
         },
         answers: {
-            A: {Fighter: 2, Paladin: 1}, 
-            B: {Monk: 2, Rogue: 1, Barbarian: 1},
-            C: {Wizard: 2, Ranger: 1, Warlock: 1, Sorceror: 1},
-            D: {Bard: 2, Cleric: 1, Druid: 1}
+            A: { Fighter: 2, Paladin: 1 },
+            B: { Monk: 2, Rogue: 1, Barbarian: 1 },
+            C: { Wizard: 2, Ranger: 1, Warlock: 1, Sorceror: 1 },
+            D: { Bard: 2, Cleric: 1, Druid: 1 }
         }
     },
     {
@@ -98,10 +102,10 @@ const questions = [
             D: `Already know the perfect spell so you slip behind a pillar and start casting`
         },
         answers: {
-            A: {Bard: 2, Druid: 1, Rogue: 1}, 
-            B: {Barbarian: 2, Monk: 1, Fighter: 1},
-            C: {Ranger: 2, Paladin: 1},
-            D: {Cleric: 2, Wizard: 1, Warlock: 1, Sorceror: 1}
+            A: { Bard: 2, Druid: 1, Rogue: 1 },
+            B: { Barbarian: 2, Monk: 1, Fighter: 1 },
+            C: { Ranger: 2, Paladin: 1 },
+            D: { Cleric: 2, Wizard: 1, Warlock: 1, Sorceror: 1 }
         }
     },
     {
@@ -113,10 +117,10 @@ const questions = [
             D: `Head for the game tables. You’re never one to turn down the challenge`
         },
         answers: {
-            A: {Bard: 2, Wizard: 1, Cleric: 1}, 
-            B: {Sorceror: 2, Barbarian: 1, Druid: 1, Monk: 1},
-            C: {Rogue: 2, Warlock: 1},
-            D: {Fighter: 2, Paladin: 1, Ranger:1}
+            A: { Bard: 2, Wizard: 1, Cleric: 1 },
+            B: { Sorceror: 2, Barbarian: 1, Druid: 1, Monk: 1 },
+            C: { Rogue: 2, Warlock: 1 },
+            D: { Fighter: 2, Paladin: 1, Ranger: 1 }
         }
     },
     {
@@ -128,10 +132,10 @@ const questions = [
             D: `Through diligent study and hard-work`
         },
         answers: {
-            A: {Paladin: 2, Cleric: 2, Warlock: 2}, 
-            B: {Druid: 2, Monk: 1, Ranger: 1},
-            C: {Sorceror: 2, Barbarian: 1, Fighter: 1},
-            D: {Wizard: 2, Bard: 2, Rogue: 1}
+            A: { Paladin: 2, Cleric: 2, Warlock: 2 },
+            B: { Druid: 2, Monk: 1, Ranger: 1 },
+            C: { Sorceror: 2, Barbarian: 1, Fighter: 1 },
+            D: { Wizard: 2, Bard: 2, Rogue: 1 }
         }
     },
     {
@@ -143,10 +147,10 @@ const questions = [
             D: `I had nothing better to do`
         },
         answers: {
-            A: {Sorceror: 2, Paladin: 1, Cleric: 1}, 
-            B: {Bard: 2, Fighter: 1, Wizard: 1},
-            C: {Druid: 2, Monk: 1, Ranger: 1},
-            D: {Warlock: 2, Rogue: 1, Barbarian: 1}
+            A: { Sorceror: 2, Paladin: 1, Cleric: 1 },
+            B: { Bard: 2, Fighter: 1, Wizard: 1 },
+            C: { Druid: 2, Monk: 1, Ranger: 1 },
+            D: { Warlock: 2, Rogue: 1, Barbarian: 1 }
         }
     },
     {
@@ -158,10 +162,10 @@ const questions = [
             D: `Rules can be bent but never broken`
         },
         answers: {
-            A: {Bard: 2, Rogue: 1, Sorceror: 1}, 
-            B: {Fighter: 2, Ranger: 1, Warlock: 1},
-            C: {Wizard: 2, Barbarian: 1, Cleric: 1},
-            D: {Paladin: 2, Druid: 1, Monk: 1}
+            A: { Bard: 2, Rogue: 1, Sorceror: 1 },
+            B: { Fighter: 2, Ranger: 1, Warlock: 1 },
+            C: { Wizard: 2, Barbarian: 1, Cleric: 1 },
+            D: { Paladin: 2, Druid: 1, Monk: 1 }
         }
     },
     {
@@ -173,31 +177,132 @@ const questions = [
             D: `However long it takes to understand all my actions, items, spells, etc.`
         },
         answers: {
-            A: {Monk: 2, Rogue: 2, Barbarian: 1 }, 
-            B: {Fighter: 2, Ranger: 1, Warlock: 1},
-            C: {Sorceror: 2, Druid: 1, Paladin: 1},
-            D: {Wizard: 2, Cleric: 2, Bard: 2}
+            A: { Monk: 2, Rogue: 2, Barbarian: 1 },
+            B: { Fighter: 2, Ranger: 1, Warlock: 1 },
+            C: { Sorceror: 2, Druid: 1, Paladin: 1 },
+            D: { Wizard: 2, Cleric: 2, Bard: 2 }
         }
-    },   
-]
+    },
+];
 
 // Answer Handling
+
+let scores = {
+    Barbarian: 0, Bard: 0, Cleric: 0, Druid: 0, Fighter: 0, Monk: 0, Paladin: 0, Ranger: 0, Rogue: 0, Sorceror: 0, Warlock: 0, Wizard: 0
+};
+
+let currentQuestionIndex = 0;
+
+// Show questions
+
+function displayQuestion() {
+    console.log("Displaying question", currentQuestionIndex);
+    const questionData = questions[currentQuestionIndex];
+
+    questionContainer.innerHTML = "";
+
+    const questionText = document.createElement("h2");
+    questionText.textContent = questionData.question;
+    questionContainer.appendChild(questionText);
+
+    for (let key in questionData.options) {
+        const label = document.createElement("label");
+        const input = document.createElement("input");
+        input.type = `radio`;
+        input.name = `answer`;
+        input.value = key;
+
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(`(${key}) ${questionData.options[key]}`));
+        questionContainer.appendChild(label);
+        questionContainer.appendChild(document.createElement("br"));
+    }
+
+    nextbtn.style.display = "block";
+}
 
 function handleAnswer() {
     const selectedAnswer = document.querySelector(`input[name="answer"]:checked`);
 
-    if (selectedAnswer) {
-        let chosenLetter = selectedAnswer.value;
-        let currentQuestion = questions[currentQuestionIndex];
+    if (!selectedAnswer) {
+        alert(`Please select an answer to proceed.`);
+        return;
+    }
 
-        userAnswers.push(currentQuestion.answers[chosenLetter]);
+    let chosenLetter = selectedAnswer.value;
+    let questionData = questions[currentQuestionIndex];
 
-        currentQuestionIndex++;
+    const selectedScores = questionData.answers[chosenLetter];
 
-        if (currentQuestionIndex < questions.lenght) {
-            displayQuestion();
-        } else {
-            showResilt();
-        }
+    for (const [className, points] of Object.entries(selectedScores)) {
+        scores[className] += points;
+    }
+
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+    } else {
+        showResult();
     }
 }
+
+// Show Results
+
+function showResult() {
+    questionContainer.innerHTML = "";
+    nextbtn.style.display = "none";
+
+    let highestScore = 0;
+    let bestClass = "";
+
+    for (const [className, score] of Object.entries(scores)) {
+        if (score > highestScore) {
+            highestScore = score;
+            bestClass = className;
+        }
+    }
+    
+    resultsContainer.innerHTML = `<h2>You are best suited to be a ${bestClass}!</h2>`;
+}
+
+
+
+scores = {
+    Barbarian: 0, Bard: 0, Cleric: 0, Druid: 0, Fighter: 0, Monk: 0, Paladin: 0, Ranger: 0, Rogue: 0, Sorceror: 0, Warlock: 0, Wizard: 0
+
+};
+
+currentQuestionIndex = 0;
+// Event Listener
+nextbtn.addEventListener("click", handleAnswer);
+
+displayQuestion();
+
+// function handleAnswer(selection, questionData) {
+//     const selectedScores = questionData.answers[selection];
+
+//     for (const [className, points] of Object.entries(selectedScores)) {
+//         scores[className] += points;
+//     }
+// }
+
+// function handleAnswer() {
+//     const selectedAnswer = document.querySelector(`input[name="answer"]:checked`);
+
+//     if (selectedAnswer) {
+//         let chosenLetter = selectedAnswer.value;
+//         let currentQuestion = questions[currentQuestionIndex];
+
+//         userAnswers.push(currentQuestion.answers[chosenLetter]);
+
+//         currentQuestionIndex++;
+
+//         if (currentQuestionIndex < questions.lenght) {
+//             displayQuestion();
+//         } else {
+//             showResult();
+//         }
+//     }
+// }
+
