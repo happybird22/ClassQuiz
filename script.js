@@ -1,6 +1,13 @@
 const questionsContainer = document.getElementById("questionsContainer");
 const nextbtn = document.getElementById("nextbtn");
 const resultsContainer = document.getElementById("resultsContainer");
+const startbtn = document.getElementById("startbtn");
+
+startbtn.addEventListener("click", function () {
+    startbtn.style.display = "none";
+    nextbtn.style.display = "block";
+    displayQuestion();
+});
 
 const questions = [
     {
@@ -199,11 +206,11 @@ function displayQuestion() {
     console.log("Displaying question", currentQuestionIndex);
     const questionData = questions[currentQuestionIndex];
 
-    questionContainer.innerHTML = "";
+    questionsContainer.innerHTML = "";
 
     const questionText = document.createElement("h2");
     questionText.textContent = questionData.question;
-    questionContainer.appendChild(questionText);
+    questionsContainer.appendChild(questionText);
 
     for (let key in questionData.options) {
         const label = document.createElement("label");
@@ -214,8 +221,8 @@ function displayQuestion() {
 
         label.appendChild(input);
         label.appendChild(document.createTextNode(`(${key}) ${questionData.options[key]}`));
-        questionContainer.appendChild(label);
-        questionContainer.appendChild(document.createElement("br"));
+        questionsContainer.appendChild(label);
+        questionsContainer.appendChild(document.createElement("br"));
     }
 
     nextbtn.style.display = "block";
@@ -250,7 +257,7 @@ function handleAnswer() {
 // Show Results
 
 function showResult() {
-    questionContainer.innerHTML = "";
+    questionsContainer.innerHTML = "";
     nextbtn.style.display = "none";
 
     let highestScore = 0;
@@ -262,8 +269,13 @@ function showResult() {
             bestClass = className;
         }
     }
+    if (!bestClass) {
+        resultsContainer.innerHTML = `<h2>Something went wrong. Please try again.</h2>`;
+    }
     
+    resultsContainer.style.display = "block";
     resultsContainer.innerHTML = `<h2>You are best suited to be a ${bestClass}!</h2>`;
+
 }
 
 
@@ -277,32 +289,4 @@ currentQuestionIndex = 0;
 // Event Listener
 nextbtn.addEventListener("click", handleAnswer);
 
-displayQuestion();
-
-// function handleAnswer(selection, questionData) {
-//     const selectedScores = questionData.answers[selection];
-
-//     for (const [className, points] of Object.entries(selectedScores)) {
-//         scores[className] += points;
-//     }
-// }
-
-// function handleAnswer() {
-//     const selectedAnswer = document.querySelector(`input[name="answer"]:checked`);
-
-//     if (selectedAnswer) {
-//         let chosenLetter = selectedAnswer.value;
-//         let currentQuestion = questions[currentQuestionIndex];
-
-//         userAnswers.push(currentQuestion.answers[chosenLetter]);
-
-//         currentQuestionIndex++;
-
-//         if (currentQuestionIndex < questions.lenght) {
-//             displayQuestion();
-//         } else {
-//             showResult();
-//         }
-//     }
-// }
 
