@@ -17,20 +17,20 @@ body {
 }
 
 h1 {
-    color: #4CAF50;
+    color: #ec2127;
 }
 
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #ec2127;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #e6a20e;
 }
 
 input[type="radio"] {
@@ -84,7 +84,7 @@ label {
 }
 
 #userForm button {
-    background-color: #4CAF50;
+    background-color: #ec2127;
     color: white;
     padding: 10px;
     font-size: 1.5em;
@@ -94,5 +94,5 @@ label {
 }
 
 #userForm button:hover {
-    background-color: #45a049;
+    background-color: #e6a20e;
 }
