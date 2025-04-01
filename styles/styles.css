@@ -47,3 +47,52 @@ label {
     margin-top: 20px;
     color: #333;
 }
+
+#titleBanner {
+    margin-top: 20px;
+}
+
+#titleBanner p {
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+#logo {
+    width: 20rem;
+    height: 12rem;
+}
+
+#userForm {
+    width: 300px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#userForm label {
+    font-weight: bold;
+}
+
+#userForm input,
+#userForm select {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#userForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#userForm button:hover {
+    background-color: #45a049;
+}

@@ -11,7 +11,7 @@ startbtn.addEventListener("click", function () {
 
 const questions = [
     {
-        question: `What motivates you most in an adventure?`,
+        question: `1 of 12: What motivates you most in an adventure?`,
         options: {
             A: `The thrill of the battle and proving my strength`,
             B: `Uncovering secrets and hidden knowledge`,
@@ -26,7 +26,7 @@ const questions = [
         }
     },
     {
-        question: `When tough decisions arise...`,
+        question: `2 of 12: When tough decisions arise...`,
         options: {
             A: `I have strong convictions that I make heard`,
             B: `I keep my cards close to my chest`,
@@ -41,7 +41,7 @@ const questions = [
         }
     },
     {
-        question: `When others get hurt, you...`,
+        question: `3 of 12: When others get hurt, you...`,
         options: {
             A: `Laugh, come on... it’s funny`,
             B: `Nothing, that seems like a them problem.`,
@@ -56,7 +56,7 @@ const questions = [
         }
     },
     {
-        question: `The world is...`,
+        question: `4 of 12: The world is...`,
         options: {
             A: `a terrifying place to be feared`,
             B: `a powerful place to be conquered`,
@@ -71,7 +71,7 @@ const questions = [
         }
     },
     {
-        question: `You and your friends are starving and near death! You...`,
+        question: `5 of 12: You and your friends are starving and near death! You...`,
         options: {
             A: `Pray to your Diety for assistance`,
             B: `Raid the nearest civilized area for food and anything else they've got`,
@@ -86,7 +86,7 @@ const questions = [
         }
     },
     {
-        question: `What is your fighting style?`,
+        question: `6 of 12: What is your fighting style?`,
         options: {
             A: `I am a skilled warrior with martial weapons`,
             B: `I enjoy hand-to-hand combat`,
@@ -101,7 +101,7 @@ const questions = [
         }
     },
     {
-        question: `You enter a large cavern with lit candle scones on each wall and a large chandelier hanging in the center of the room. Directly beneath it is the evil cult you’ve been tracking. They are nearing the end of a summoning ritual to call even greater evil upon your world! You...`,
+        question: `7 of 12: You enter a large cavern with lit candle sconces on each wall and a large chandelier hanging in the center of the room. Directly beneath it is the evil cult you’ve been tracking. They are nearing the end of a summoning ritual to call even greater evil upon your world! You...`,
         options: {
             A: `Pull your party back! You’ll need a solid plan here.`,
             B: `ready your weapons and rush into action, attacking the closest cultist`,
@@ -116,7 +116,7 @@ const questions = [
         }
     },
     {
-        question: `You and your party are relaxing at a tavern after a long day. You...`,
+        question: `8 of 12: You and your party are relaxing at a tavern after a long day. You...`,
         options: {
             A: `Work the room! There could be some important nobles there.`,
             B: `Relax with as many ales as your constitution will allow`,
@@ -131,7 +131,7 @@ const questions = [
         }
     },
     {
-        question: `Where does your magically ability come from?`,
+        question: `9 of 12: Where does your magical ability come from?`,
         options: {
             A: `My Deity, of course`,
             B: `From the natural magical weave itself`,
@@ -146,7 +146,7 @@ const questions = [
         }
     },
     {
-        question: `Why are you playing D&D?`,
+        question: `10 of 12: Why are you playing D&D?`,
         options: {
             A: `I need an escape from reality`,
             B: `I just want to make new friends`,
@@ -161,7 +161,7 @@ const questions = [
         }
     },
     {
-        question: `Do you like to learn and follow rules?`,
+        question: `11 of 12: Do you like to learn and follow rules?`,
         options: {
             A: `Rules are a barrier to creativity`,
             B: `Rules are great guidelines to get things going`,
@@ -176,7 +176,7 @@ const questions = [
         }
     },
     {
-        question: `How long will you spend prepping for gameplay?`,
+        question: `12 of 12: How long will you spend prepping for gameplay?`,
         options: {
             A: `I need to prep?`,
             B: `I’ll make sure I understand my character sheet and have dice.`,
