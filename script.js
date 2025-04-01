@@ -289,4 +289,19 @@ currentQuestionIndex = 0;
 // Event Listener
 nextbtn.addEventListener("click", handleAnswer);
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("userForm").addEventListener("submit", function(event) {
+        event.preventDefault();
 
+        const userName = document.getElementById("name").value;
+
+        const message = document.createElement("p");
+        message.textContent = `Thank you for subscribing, ${userName}!`
+        message.style.fontWeight = `bold`;
+        message.style.color = `green`;
+        message.style.marginTop = `10px`;
+
+        const form = document.getElementById("userForm");
+        form.replaceWith(message);
+    });
+});
