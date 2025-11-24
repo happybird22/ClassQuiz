@@ -1,98 +1,163 @@
-#nextbtn { display: none; }
+/* --- GENERAL STYLING --- */
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Trebuchet MS', Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #faf7f5;
     margin: 0;
     padding: 0;
+    color: #222;
 }
+
+/* Center container with soft fantasy-themed card styling */
 
 #quizContainer {
-    max-width: 600px;
+    max-width: 700px;
     margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
+
+/* --- TITLES --- */
 
 h1 {
-    color: #ec2127;
+    color: #EC2127;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
+h2 {
+    color: #EC2127;
+    margin-top: 10px;
+}
+
+/* --- BUTTONS --- */
+
 button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ec2127;
-    color: white;
+    margin-top: 25px;
+    padding: 12px 26px;
+    background-color: #EC2127;
+    color: #fff;
     border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.25s ease;
 }
 
 button:hover {
-    background-color: #e6a20e;
+    background-color: #E6A20E;
+    transform: translateY(-2px);
 }
 
-input[type="radio"] {
-    margin: 5px;
+/* Hide next button until quiz starts */
+#nextbtn { 
+    display: none; 
 }
+
+/* --- MULTIPLE CHOICE OPTIONS --- */
 
 label {
     display: block;
-    margin: 10px 0;
+    background-color: #f8f2ef;
+    padding: 12px 15px;
+    margin: 12px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid #eadfdc;
+    transition: background-color 0.25s ease, border 0.25s ease;
 }
+
+label:hover {
+    background-color: #f0e5e1;
+    border-color: #EC2127;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #EC2127; /* Makes the radio button red */
+}
+
+/* --- RESULT STYLING --- */
 
 #resultsContainer {
-    font-size: 1.5em;
-    margin-top: 20px;
+    margin-top: 30px;
+    padding: 20px 25px;
+    background-color: #fff7ed;
+    border-left: 6px solid #EC2127;
+    border-radius: 8px;
+    font-size: 1.35rem;
     color: #333;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
+/* Class description paragraph */
+#resultsContainer p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* --- TITLE BANNER / LOGO --- */
+
 #titleBanner {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 #titleBanner p {
     font-weight: bold;
-    font-size: larger;
-    margin-bottom: 10px;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
 }
 
 #logo {
-    width: 20rem;
-    height: 12rem;
+    width: 18rem;
+    height: auto;
+    margin-bottom: 10px;
 }
 
+/* --- USER FORM --- */
+
 #userForm {
-    width: 300px;
-    margin: 20px auto;
+    width: 330px;
+    margin: 30px auto 10px auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 #userForm label {
     font-weight: bold;
+    text-align: left;
 }
 
 #userForm input,
 #userForm select {
-    padding: 8px;
-    font-size: 1em;
+    padding: 10px;
+    font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 #userForm button {
-    background-color: #ec2127;
+    background-color: #EC2127;
     color: white;
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 1.3rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
 #userForm button:hover {
-    background-color: #e6a20e;
+    background-color: #E6A20E;
 }
