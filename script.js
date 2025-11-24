@@ -253,6 +253,20 @@ function handleAnswer() {
         showResult();
     }
 }
+const classDescriptions = {
+    Barbarian: "Fierce, fearless, and fueled by raw power, Barbarians charge headfirst into danger. You thrive on adrenaline, instinct, and unbreakable determination.",
+    Bard: "A charismatic performer and jack-of-all-trades, Bards wield music and magic with style. You inspire allies, confuse foes, and charm your way through any situation.",
+    Cleric: "Devoted to a higher power, Clerics blend divine magic with battlefield presence. You heal, protect, and smite evil—all in service of your deity.",
+    Druid: "Attuned to the natural world, Druids wield primal magic and shape-shifting abilities. You balance wisdom with wild instinct.",
+    Fighter: "Disciplined, skilled, and versatile, Fighters excel in any combat scenario. You rely on precision, technique, and strategy.",
+    Monk: "Masters of discipline and martial arts, Monks channel inner energy (ki) to move with grace and strike with power.",
+    Paladin: "A sworn oath guides you as you combine divine power with martial strength. You are a protector, judge, and beacon of hope.",
+    Ranger: "Quiet, perceptive, and deadly at range, Rangers thrive in exploration and survival. You track your foes and strike from afar.",
+    Rogue: "Quick-thinking and cunning, Rogues excel in stealth, trickery, and precision. You know how to strike where it counts.",
+    Sorceror: "Magic flows through your veins, wild and instinctual. Sorcerers wield raw arcane power fueled by emotion and innate talent.",
+    Warlock: "Warlocks draw power from a mysterious patron. Resourceful and bold, you unlock forbidden magic in exchange for a pact.",
+    Wizard: "The ultimate scholars of the arcane, Wizards study tirelessly to master magic. You rely on intellect, planning, and unmatched spell versatility."
+};
 
 // Show Results
 
@@ -269,16 +283,20 @@ function showResult() {
             bestClass = className;
         }
     }
+
     if (!bestClass) {
         resultsContainer.innerHTML = `<h2>Something went wrong. Please try again.</h2>`;
+        return;
     }
-    
+
+    const description = classDescriptions[bestClass] || "";
+
     resultsContainer.style.display = "block";
-    resultsContainer.innerHTML = `<h2>You are best suited to be a ${bestClass}!</h2>`;
-
+    resultsContainer.innerHTML = `
+        <h2>You are best suited to be a ${bestClass}!</h2>
+        <p>${description}</p>
+    `;
 }
-
-
 
 scores = {
     Barbarian: 0, Bard: 0, Cleric: 0, Druid: 0, Fighter: 0, Monk: 0, Paladin: 0, Ranger: 0, Rogue: 0, Sorceror: 0, Warlock: 0, Wizard: 0
