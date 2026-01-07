@@ -104,7 +104,7 @@ const questions = [
         }
     },
     {
-        question: `7 of 12: You enter a large cavern... You...`,
+        question: `7 of 12: You enter a large cavern with lit candle sconces on each wall and a large chandelier hanging in the center of the room. Directly beneath it is the evil cult you’ve been tracking. They are nearing the end of a summoning ritual to call even greater evil upon your world! You...`,
         options: {
             A: `Pull your party back! You’ll need a solid plan here.`,
             B: `Ready your weapons and rush into action`,
@@ -119,12 +119,12 @@ const questions = [
         }
     },
     {
-        question: `8 of 12: You are relaxing at a tavern...`,
+        question: `8 of 12: You and your party are relaxing at a tavern after a long day. You...`,
         options: {
-            A: `Work the room`,
-            B: `Drink all the ale`,
-            C: `Pick pockets`,
-            D: `Play games`
+            A: `Work the room! There could be some important nobles there.`,
+            B: `Relax with as many ales as your constitution will allow`,
+            C: `Check for valuables in the pockets of nearby patrons`,
+            D: `Head for the game tables. You’re never one to turn down the challenge`
         },
         answers: {
             A: { Bard: 2, Wizard: 1, Cleric: 1 },
@@ -136,10 +136,10 @@ const questions = [
     {
         question: `9 of 12: Where does your magic come from?`,
         options: {
-            A: `My deity`,
-            B: `Nature`,
-            C: `Innate power`,
-            D: `Study`
+            A: `My deity, of course`,
+            B: `From the natural magical weave itself`,
+            C: `It just comes to me, sometimes in surprising ways`,
+            D: `Through diligent study and hard-work`
         },
         answers: {
             A: { Paladin: 2, Cleric: 2, Warlock: 2 },
@@ -149,12 +149,12 @@ const questions = [
         }
     },
     {
-        question: `10 of 12: Why play D&D?`,
+        question: `10 of 12: Why are you playing D&D?`,
         options: {
-            A: `Escape`,
-            B: `Friends`,
-            C: `Lore`,
-            D: `Why not`
+            A: `I need an escape from reality`,
+            B: `I want to make new friends`,
+            C: `I love the immersive, magical lore`,
+            D: `I had nothing better to do`
         },
         answers: {
             A: { Sorcerer: 2, Paladin: 1, Cleric: 1 },
@@ -179,7 +179,7 @@ const questions = [
         }
     },
     {
-        question: `12 of 12: How much do you prep?`,
+        question: `12 of 12: How much prep will you do before gameplay?`,
         options: {
             A: `What prep?`,
             B: `Basics only`,
