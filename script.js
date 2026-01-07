@@ -19,7 +19,7 @@ const questions = [
             D: `Amassing power and fortune`
         },
         answers: {
-            A: { Barbarian: 2, Fighter: 1, Sorceror: 1 },
+            A: { Barbarian: 2, Fighter: 1, Sorcerer: 1 },
             B: { Ranger: 2, Rogue: 1, Warlock: 1 },
             C: { Paladin: 2, Monk: 1, Cleric: 1, Druid: 1 },
             D: { Wizard: 2, Bard: 1 }
@@ -37,7 +37,7 @@ const questions = [
             A: { Bard: 2, Paladin: 1, Cleric: 1 },
             B: { Rogue: 2, Wizard: 1, Barbarian: 1 },
             C: { Druid: 2, Monk: 1, Ranger: 1 },
-            D: { Fighter: 2, Warlock: 1, Sorceror: 1 }
+            D: { Fighter: 2, Warlock: 1, Sorcerer: 1 }
         }
     },
     {
@@ -49,7 +49,7 @@ const questions = [
             D: `Anything I can to help them feel better`
         },
         answers: {
-            A: { Rogue: 2, Sorceror: 1, Fighter: 1 },
+            A: { Rogue: 2, Sorcerer: 1, Fighter: 1 },
             B: { Ranger: 2, Warlock: 1, Wizard: 1 },
             C: { Paladin: 2, Monk: 1, Barbarian: 1 },
             D: { Cleric: 2, Druid: 1, Bard: 1 }
@@ -67,7 +67,7 @@ const questions = [
             A: { Warlock: 2, Rogue: 1, Paladin: 1 },
             B: { Wizard: 2, Barbarian: 1, Fighter: 1 },
             C: { Druid: 2, Ranger: 1, Monk: 1 },
-            D: { Sorceror: 2, Bard: 1, Cleric: 1 }
+            D: { Sorcerer: 2, Bard: 1, Cleric: 1 }
         }
     },
     {
@@ -80,7 +80,7 @@ const questions = [
         },
         answers: {
             A: { Cleric: 2, Paladin: 1, Warlock: 1 },
-            B: { Barbarian: 2, Fighter: 1, Sorceror: 1 },
+            B: { Barbarian: 2, Fighter: 1, Sorcerer: 1 },
             C: { Ranger: 2, Rogue: 1, Monk: 1 },
             D: { Druid: 2, Bard: 1, Wizard: 1 }
         }
@@ -96,7 +96,7 @@ const questions = [
         answers: {
             A: { Fighter: 2, Paladin: 1 },
             B: { Monk: 2, Rogue: 1, Barbarian: 1 },
-            C: { Wizard: 2, Ranger: 1, Warlock: 1, Sorceror: 1 },
+            C: { Wizard: 2, Ranger: 1, Warlock: 1, Sorcerer: 1 },
             D: { Bard: 2, Cleric: 1, Druid: 1 }
         }
     },
@@ -112,7 +112,7 @@ const questions = [
             A: { Bard: 2, Druid: 1, Rogue: 1 },
             B: { Barbarian: 2, Monk: 1, Fighter: 1 },
             C: { Ranger: 2, Paladin: 1 },
-            D: { Cleric: 2, Wizard: 1, Warlock: 1, Sorceror: 1 }
+            D: { Cleric: 2, Wizard: 1, Warlock: 1, Sorcerer: 1 }
         }
     },
     {
@@ -125,7 +125,7 @@ const questions = [
         },
         answers: {
             A: { Bard: 2, Wizard: 1, Cleric: 1 },
-            B: { Sorceror: 2, Barbarian: 1, Druid: 1, Monk: 1 },
+            B: { Sorcerer: 2, Barbarian: 1, Druid: 1, Monk: 1 },
             C: { Rogue: 2, Warlock: 1 },
             D: { Fighter: 2, Paladin: 1, Ranger: 1 }
         }
@@ -141,7 +141,7 @@ const questions = [
         answers: {
             A: { Paladin: 2, Cleric: 2, Warlock: 2 },
             B: { Druid: 2, Monk: 1, Ranger: 1 },
-            C: { Sorceror: 2, Barbarian: 1, Fighter: 1 },
+            C: { Sorcerer: 2, Barbarian: 1, Fighter: 1 },
             D: { Wizard: 2, Bard: 2, Rogue: 1 }
         }
     },
@@ -154,7 +154,7 @@ const questions = [
             D: `I had nothing better to do`
         },
         answers: {
-            A: { Sorceror: 2, Paladin: 1, Cleric: 1 },
+            A: { Sorcerer: 2, Paladin: 1, Cleric: 1 },
             B: { Bard: 2, Fighter: 1, Wizard: 1 },
             C: { Druid: 2, Monk: 1, Ranger: 1 },
             D: { Warlock: 2, Rogue: 1, Barbarian: 1 }
@@ -169,7 +169,7 @@ const questions = [
             D: `Rules can be bent but never broken`
         },
         answers: {
-            A: { Bard: 2, Rogue: 1, Sorceror: 1 },
+            A: { Bard: 2, Rogue: 1, Sorcerer: 1 },
             B: { Fighter: 2, Ranger: 1, Warlock: 1 },
             C: { Wizard: 2, Barbarian: 1, Cleric: 1 },
             D: { Paladin: 2, Druid: 1, Monk: 1 }
@@ -186,7 +186,7 @@ const questions = [
         answers: {
             A: { Monk: 2, Rogue: 2, Barbarian: 1 },
             B: { Fighter: 2, Ranger: 1, Warlock: 1 },
-            C: { Sorceror: 2, Druid: 1, Paladin: 1 },
+            C: { Sorcerer: 2, Druid: 1, Paladin: 1 },
             D: { Wizard: 2, Cleric: 2, Bard: 2 }
         }
     },
@@ -195,7 +195,7 @@ const questions = [
 // Answer Handling
 
 let scores = {
-    Barbarian: 0, Bard: 0, Cleric: 0, Druid: 0, Fighter: 0, Monk: 0, Paladin: 0, Ranger: 0, Rogue: 0, Sorceror: 0, Warlock: 0, Wizard: 0
+    Barbarian: 0, Bard: 0, Cleric: 0, Druid: 0, Fighter: 0, Monk: 0, Paladin: 0, Ranger: 0, Rogue: 0, Sorcerer: 0, Warlock: 0, Wizard: 0
 };
 
 let currentQuestionIndex = 0;
@@ -263,9 +263,24 @@ const classDescriptions = {
     Paladin: "A sworn oath guides you as you combine divine power with martial strength. You are a protector, judge, and beacon of hope.",
     Ranger: "Quiet, perceptive, and deadly at range, Rangers thrive in exploration and survival. You track your foes and strike from afar.",
     Rogue: "Quick-thinking and cunning, Rogues excel in stealth, trickery, and precision. You know how to strike where it counts.",
-    Sorceror: "Magic flows through your veins, wild and instinctual. Sorcerers wield raw arcane power fueled by emotion and innate talent.",
+    Sorcerer: "Magic flows through your veins, wild and instinctual. Sorcerers wield raw arcane power fueled by emotion and innate talent.",
     Warlock: "Warlocks draw power from a mysterious patron. Resourceful and bold, you unlock forbidden magic in exchange for a pact.",
     Wizard: "The ultimate scholars of the arcane, Wizards study tirelessly to master magic. You rely on intellect, planning, and unmatched spell versatility."
+};
+
+const classVideoLinks = {
+    Barbarian: "https://www.dungeonsnotdating.com/classaids/barbarian",
+    Bard: "https://www.dungeonsnotdating.com/classaids/bard",
+    Cleric: "https://www.dungeonsnotdating.com/classaids/cleric",
+    Druid: "https://www.dungeonsnotdating.com/classaids/druid",
+    Fighter: "https://www.dungeonsnotdating.com/classaids/fighter",
+    Monk: "https://www.dungeonsnotdating.com/classaids/monk",
+    Paladin: "https://www.dungeonsnotdating.com/classaids/paladin",
+    Ranger: "https://www.dungeonsnotdating.com/classaids/ranger",
+    Rogue: "https://www.dungeonsnotdating.com/classaids/rogue",
+    Sorceror: "https://www.dungeonsnotdating.com/classaids/sorcerer",
+    Warlock: "https://www.dungeonsnotdating.com/classaids/warlock",
+    Wizard: "https://www.dungeonsnotdating.com/classaids/wizard"
 };
 
 // Show Results
@@ -297,13 +312,53 @@ function showResult() {
         <p>${description}</p>
     `;
 }
+const videoLink = classVideoLinks[bestClass];
+
+resultsContainer.innerHTML = `
+    <h2>You are best suited to be a ${bestClass}!</h2>
+    <p>
+        <a href="${videoLink}" target="_blank" rel="noopener">
+            Watch videos about the ${bestClass} class
+        </a>
+    </p>
+    <button id="retakeBtn">Retake Quiz</button>
+`;
+
 
 scores = {
-    Barbarian: 0, Bard: 0, Cleric: 0, Druid: 0, Fighter: 0, Monk: 0, Paladin: 0, Ranger: 0, Rogue: 0, Sorceror: 0, Warlock: 0, Wizard: 0
+    Barbarian: 0, Bard: 0, Cleric: 0, Druid: 0, Fighter: 0, Monk: 0, Paladin: 0, Ranger: 0, Rogue: 0, Sorcerer: 0, Warlock: 0, Wizard: 0
 
 };
 
 currentQuestionIndex = 0;
+
+resultsContainer.style.display = "block";
+resultsContainer.innerHTML = `
+    <h2>You are best suited to be a ${bestClass}!</h2>
+    <button id="retakeBtn">Retake Quiz</button>
+`;
+
+document.getElementById("retakeBtn").addEventListener("click", resetQuiz);
+
+// Reset Quiz
+function resetQuiz() {
+    // Reset scores
+    for (let key in scores) {
+        scores[key] = 0;
+    }
+
+    // Reset question index
+    currentQuestionIndex = 0;
+
+    // Reset UI
+    resultsContainer.style.display = "none";
+    resultsContainer.innerHTML = "";
+    startbtn.style.display = "none";
+    nextbtn.style.display = "block";
+
+    displayQuestion();
+}
+
 // Event Listener
 nextbtn.addEventListener("click", handleAnswer);
 
