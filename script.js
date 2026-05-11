@@ -262,18 +262,18 @@ const classDescriptions = {
 
 // Video Links
 const classVideoLinks = {
-    Barbarian: "https://www.dungeonsnotdating.com/classaids/barbarian",
-    Bard: "https://www.dungeonsnotdating.com/classaids/bard",
-    Cleric: "https://www.dungeonsnotdating.com/classaids/cleric",
-    Druid: "https://www.dungeonsnotdating.com/classaids/druid",
-    Fighter: "https://www.dungeonsnotdating.com/classaids/fighter",
-    Monk: "https://www.dungeonsnotdating.com/classaids/monk",
-    Paladin: "https://www.dungeonsnotdating.com/classaids/paladin",
-    Ranger: "https://www.dungeonsnotdating.com/classaids/ranger",
-    Rogue: "https://www.dungeonsnotdating.com/classaids/rogue",
-    Sorcerer: "https://www.dungeonsnotdating.com/classaids/sorcerer",
-    Warlock: "https://www.dungeonsnotdating.com/classaids/warlock",
-    Wizard: "https://www.dungeonsnotdating.com/classaids/wizard"
+    Barbarian: "https://www.dungeonsnotdating.com/class-videos/barbarian",
+    Bard: "https://www.dungeonsnotdating.com/class-videos/bard",
+    Cleric: "https://www.dungeonsnotdating.com/class-videos/cleric",
+    Druid: "https://www.dungeonsnotdating.com/class-videos/druid",
+    Fighter: "https://www.dungeonsnotdating.com/class-videos/fighter",
+    Monk: "https://www.dungeonsnotdating.com/class-videos/monk",
+    Paladin: "https://www.dungeonsnotdating.com/class-videos/paladin",
+    Ranger: "https://www.dungeonsnotdating.com/class-videos/ranger",
+    Rogue: "https://www.dungeonsnotdating.com/class-videos/rogue",
+    Sorcerer: "https://www.dungeonsnotdating.com/class-videos/sorcerer",
+    Warlock: "https://www.dungeonsnotdating.com/class-videos/warlock",
+    Wizard: "https://www.dungeonsnotdating.com/class-videos/wizard"
 };
 
 // Show Result
