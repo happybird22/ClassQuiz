@@ -286,6 +286,7 @@ function showResult() {
     );
 
     resultsContainer.style.display = "block";
+    document.getElementById("appCta").style.display = "none";
     resultsContainer.innerHTML = `
         <h2>You are best suited to be a ${bestClass}!</h2>
         <p>${classDescriptions[bestClass]}</p>
@@ -294,10 +295,48 @@ function showResult() {
                 Watch videos about the ${bestClass} class
             </a>
         </p>
-        <button id="retakeBtn">Retake Quiz</button>
+        <div class="resultAppCta">
+            <p>Ready to find your party?</p>
+            <div id="resultStoreLinks">
+                <a class="storeBadge" href="https://apps.apple.com/us/app/dungeons-not-dating/id6657984203" target="_blank" rel="noopener">Download on the App Store</a>
+                <a class="storeBadge" href="https://play.google.com/store/apps/details?id=com.dungeonsnotdating" target="_blank" rel="noopener">Get it on Google Play</a>
+            </div>
+        </div>
+        <div class="resultActions">
+            <button id="shareBtn">Share Your Result</button>
+            <button id="retakeBtn">Retake Quiz</button>
+        </div>
     `;
 
     document.getElementById("retakeBtn").addEventListener("click", resetQuiz);
+
+    const shareBtn = document.getElementById("shareBtn");
+    shareBtn.addEventListener("click", async () => {
+        const shareData = {
+            title: "Dungeons Not Dating",
+            text: `I'm a ${bestClass} in Dungeons Not Dating! Find out your D&D class:`,
+            url: window.location.href
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (error) {
+                // User cancelled the share sheet; nothing to do.
+            }
+            return;
+        }
+
+        try {
+            await navigator.clipboard.writeText(`${shareData.text} ${shareData.url}`);
+            shareBtn.textContent = "Link Copied!";
+            setTimeout(() => {
+                shareBtn.textContent = "Share Your Result";
+            }, 2000);
+        } catch (error) {
+            alert(`Copy this link to share: ${shareData.url}`);
+        }
+    });
 }
 
 // Reset Quiz
@@ -305,6 +344,7 @@ function resetQuiz() {
     for (let key in scores) scores[key] = 0;
     currentQuestionIndex = 0;
     resultsContainer.style.display = "none";
+    document.getElementById("appCta").style.display = "block";
     displayQuestion();
 }
 

@@ -163,6 +163,75 @@ input[type="radio"] {
     color: #ff9a9c;
 }
 
+/* --- APP CTA / STORE BADGES --- */
+
+#appCta {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    color: #A7B0C6;
+    font-size: 0.95rem;
+}
+
+.resultAppCta {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#storeLinks,
+#resultStoreLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.storeBadge {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    font-family: 'Onest', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.storeBadge:hover {
+    background-color: rgba(235, 36, 40, 0.15);
+    border-color: #EB2428;
+    transform: translateY(-2px);
+}
+
+/* --- RESULT ACTIONS --- */
+
+.resultActions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+#shareBtn {
+    background: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+}
+
+#shareBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #FFFFFF;
+    box-shadow: none;
+}
+
 /* --- USER FORM --- */
 
 #userForm {
