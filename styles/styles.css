@@ -1,87 +1,134 @@
 /* --- GENERAL STYLING --- */
 
 body {
-    font-family: 'Trebuchet MS', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Onest', 'Trebuchet MS', Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    background-color: #faf7f5;
+    background-color: #08080b;
+    background-image: radial-gradient(ellipse 60% 40% at 50% -10%, rgba(235, 36, 40, 0.25), transparent 70%);
     margin: 0;
     padding: 0;
-    color: #222;
+    min-height: 100vh;
+    color: #F4F5F6;
+    position: relative;
+    overflow-x: hidden;
 }
 
-/* Center container with soft fantasy-themed card styling */
+/* Decorative dragon linework, echoing the mobile app's background */
+
+#dragonArt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(70vw, 640px);
+    height: auto;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Center container with dark fantasy-themed card styling */
 
 #quizContainer {
+    position: relative;
+    z-index: 1;
     max-width: 700px;
-    margin: 50px auto;
+    margin: 10px auto 50px;
     padding: 30px 40px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    background-color: rgba(28, 27, 35, 0.85);
+    border: 1px solid rgba(235, 36, 40, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 60px rgba(235, 36, 40, 0.15);
+    backdrop-filter: blur(6px);
+}
+
+/* --- LOGO --- */
+
+#logo {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: min(70%, 300px);
+    height: auto;
+    margin: 40px auto 0;
+    filter: drop-shadow(0 0 24px rgba(235, 36, 40, 0.35));
 }
 
 /* --- TITLES --- */
 
 h1 {
-    color: #EC2127;
-    font-size: 2.2rem;
+    font-family: 'Cinzel', 'Trebuchet MS', serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 1.7rem;
     letter-spacing: 1px;
+    margin-top: 0;
     margin-bottom: 10px;
+    text-shadow: 0 0 18px rgba(235, 36, 40, 0.5);
 }
 
 h2 {
-    color: #EC2127;
+    font-family: 'Cinzel', 'Trebuchet MS', serif;
+    font-weight: 600;
+    color: #FFFFFF;
     margin-top: 10px;
+    text-shadow: 0 0 14px rgba(235, 36, 40, 0.4);
 }
 
 /* --- BUTTONS --- */
 
 button {
     margin-top: 25px;
-    padding: 12px 26px;
-    background-color: #EC2127;
+    padding: 13px 32px;
+    background: linear-gradient(135deg, #EB2428, #a3181b);
     color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    font-family: 'Onest', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     cursor: pointer;
+    box-shadow: 0 6px 20px rgba(235, 36, 40, 0.45);
     transition: all 0.25s ease;
 }
 
 button:hover {
-    background-color: #E6A20E;
+    background: linear-gradient(135deg, #ff3a3f, #EB2428);
+    box-shadow: 0 8px 28px rgba(235, 36, 40, 0.65);
     transform: translateY(-2px);
 }
 
 /* Hide next button until quiz starts */
-#nextbtn { 
-    display: none; 
+#nextbtn {
+    display: none;
 }
 
 /* --- MULTIPLE CHOICE OPTIONS --- */
 
 label {
     display: block;
-    background-color: #f8f2ef;
+    background-color: rgba(255, 255, 255, 0.04);
     padding: 12px 15px;
     margin: 12px auto;
     max-width: 500px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-align: left;
+    color: #F4F5F6;
     cursor: pointer;
-    border: 1px solid #eadfdc;
-    transition: background-color 0.25s ease, border 0.25s ease;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: background-color 0.25s ease, border 0.25s ease, transform 0.15s ease;
 }
 
 label:hover {
-    background-color: #f0e5e1;
-    border-color: #EC2127;
+    background-color: rgba(235, 36, 40, 0.12);
+    border-color: #EB2428;
+    transform: translateX(2px);
 }
 
 input[type="radio"] {
     margin-right: 10px;
-    accent-color: #EC2127; /* Makes the radio button red */
+    accent-color: #EB2428;
 }
 
 /* --- RESULT STYLING --- */
@@ -89,40 +136,31 @@ input[type="radio"] {
 #resultsContainer {
     margin-top: 30px;
     padding: 20px 25px;
-    background-color: #fff7ed;
-    border-left: 6px solid #EC2127;
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-left: 6px solid #EB2428;
+    border-radius: 10px;
     font-size: 1.35rem;
-    color: #333;
+    color: #F4F5F6;
     line-height: 1.6;
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Class description paragraph */
 #resultsContainer p {
     margin-top: 10px;
     font-size: 1.1rem;
+    color: #A7B0C6;
 }
 
-/* --- TITLE BANNER / LOGO --- */
-
-#titleBanner {
-    margin-top: 25px;
+#resultsContainer a {
+    color: #ff6a6d;
 }
 
-#titleBanner p {
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin-bottom: 12px;
-}
-
-#logo {
-    width: 18rem;
-    height: auto;
-    margin-bottom: 10px;
+#resultsContainer a:hover {
+    color: #ff9a9c;
 }
 
 /* --- USER FORM --- */
@@ -136,28 +174,25 @@ input[type="radio"] {
 }
 
 #userForm label {
-    font-weight: bold;
+    font-weight: 600;
     text-align: left;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 #userForm input,
 #userForm select {
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    font-family: 'Onest', sans-serif;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #F4F5F6;
 }
 
 #userForm button {
-    background-color: #EC2127;
-    color: white;
     padding: 10px;
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-#userForm button:hover {
-    background-color: #E6A20E;
+    font-size: 1.1rem;
 }
