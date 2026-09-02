@@ -321,10 +321,14 @@ function showResult() {
         if (navigator.share) {
             try {
                 await navigator.share(shareData);
+                return;
             } catch (error) {
-                // User cancelled the share sheet; nothing to do.
+                if (error.name === "AbortError") {
+                    // User cancelled the share sheet; nothing to do.
+                    return;
+                }
+                // Any other failure falls through to the clipboard fallback below.
             }
-            return;
         }
 
         try {
