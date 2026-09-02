@@ -298,8 +298,8 @@ function showResult() {
         <div class="resultAppCta">
             <p>Ready to find your party?</p>
             <div id="resultStoreLinks">
-                <a class="storeBadge" href="https://apps.apple.com/us/app/dungeons-not-dating/id6657984203" target="_blank" rel="noopener">Download on the App Store</a>
-                <a class="storeBadge" href="https://play.google.com/store/apps/details?id=com.dungeonsnotdating" target="_blank" rel="noopener">Get it on Google Play</a>
+                <a class="storeBadge" href="https://apps.apple.com/us/app/dungeons-not-dating/id6757459111" target="_blank" rel="noopener">Download on the App Store</a>
+                <a class="storeBadge" href="https://play.google.com/store/apps/details?id=com.dungeonsnotdating.app&amp;pcampaignid=web_share" target="_blank" rel="noopener">Get it on Google Play</a>
             </div>
         </div>
         <div class="resultActions">
