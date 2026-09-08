@@ -246,18 +246,18 @@ function handleAnswer() {
 
 // Class Descriptions
 const classDescriptions = {
-    Barbarian: "Fierce, fearless, and fueled by raw power.",
-    Bard: "Charismatic performers who wield magic through art.",
-    Cleric: "Divine champions who heal and smite.",
-    Druid: "Nature-bound shapeshifters and spellcasters.",
-    Fighter: "Masters of combat and discipline.",
-    Monk: "Martial artists guided by inner energy.",
-    Paladin: "Holy warriors sworn to an oath.",
-    Ranger: "Skilled hunters and survivalists.",
-    Rogue: "Stealthy and precise opportunists.",
-    Sorcerer: "Innate wielders of arcane power.",
-    Warlock: "Pact-bound wielders of forbidden magic.",
-    Wizard: "Scholars of the arcane."
+    Barbarian: "Barbarians are unstoppable forces of raw fury, channeling primal rage to overpower every threat in their path. You lead with your gut and your gauntlets, trusting instinct over strategy and strength over subtlety. When the fight gets desperate, you're the one still standing, swinging harder and refusing to back down.",
+    Bard: "Bards weave magic through music, wit, and charm, turning every room into their stage. You inspire your allies with a well-timed song and talk your way out of trouble just as easily as you talk your way in. Equal parts storyteller and spellcaster, you prove that words can be just as powerful as any blade.",
+    Cleric: "Clerics channel divine power to heal the wounded and strike down evil in the same breath. Guided by faith and purpose, you're the steady hand your party leans on when things go wrong. Whether mending wounds or smiting foes, your devotion makes you both a shield and a sword.",
+    Druid: "Druids are shapeshifting guardians of the natural world, drawing power from the wild itself. You feel just as at home prowling as a wolf as you do calling down a storm, always fighting to protect the balance between civilization and nature. Nature isn't just your ally, it's an extension of you.",
+    Fighter: "Fighters are masters of martial combat, relying on discipline, training, and raw skill to win the day. Whatever the weapon or the odds, you've drilled for this moment and know exactly how to close the gap. No flashy magic required, just precision, grit, and an unbreakable will to win.",
+    Monk: "Monks turn their bodies into finely honed weapons, channeling inner energy into lightning-fast strikes and impossible feats of movement. You value discipline and balance above brute force, finding power in stillness as much as in motion. Focused and unshakable, you're a storm hiding behind a calm exterior.",
+    Paladin: "Paladins are holy warriors bound by a sacred oath, wielding both blade and divine power in defense of what's right. You lead by conviction, standing your ground when others would flee and inspiring your allies to do the same. For you, justice isn't just a goal, it's a promise you intend to keep.",
+    Ranger: "Rangers are skilled trackers and survivalists, equally deadly with a blade in close quarters or a bow from a distance. You know the wilds better than anyone, reading the terrain and your enemies with the same practiced eye. Where others see wilderness, you see home turf.",
+    Rogue: "Rogues thrive in the shadows, relying on cunning, stealth, and impeccable timing to get exactly what they want. You'd rather slip past a fight than start one, though you're more than capable of finishing it if it comes to that. Quick hands, quicker wit, and an exit plan for everything.",
+    Sorcerer: "Sorcerers wield magic that comes from within, an innate, untamed power flowing through their very bloodline. You don't study spells so much as unleash them, bending raw arcane energy to your will through sheer force of personality. Unpredictable and undeniably powerful, you are the magic itself.",
+    Warlock: "Warlocks draw their power from a pact with something greater, and stranger, than themselves, wielding forbidden magic most wouldn't dare touch. You walk a line between ambition and danger, always aware that power like yours comes with a price. Mysterious and formidable, you make deals no one else would risk.",
+    Wizard: "Wizards master magic through relentless study, turning knowledge itself into their greatest weapon. Every spell you cast is the result of discipline, precision, and years spent poring over ancient texts. What you lack in raw instinct, you make up for in sheer command of the arcane."
 };
 
 // Video Links
